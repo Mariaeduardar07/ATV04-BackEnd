@@ -40,24 +40,7 @@ DATABASE_URL="file:./dev.db"
 
 Este é o caminho para o banco SQLite que será usado no desenvolvimento.
 
-### 3. Criando o arquivo schema.prisma
-
-O Prisma já criou o arquivo `prisma/schema.prisma`. Modifique-o conforme o modelo final:
-
-```prisma
-generator client {
-  provider = "prisma-client-js"
-}
-
-datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
-}
-
-model Task {
-  id        Int     @id @default(autoincrement())# Projeto Backend com Prisma - Gerenciamento de Cursos
-
- ---
+O Prisma já criou o arquivo `prisma/schema.prisma`. Modifique-o conforme o modelo final
 
 ## Passo a Passo da Configuração
 
