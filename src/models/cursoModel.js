@@ -19,6 +19,7 @@ class CursoModel {
     });
   };
 
+  // Criação do Put: atualiza um curso existente
   update = async (id, title, instrument, level, duration, price, instructor, maxStudents) => {
     try {
       const curso = await prisma.cursos.update({

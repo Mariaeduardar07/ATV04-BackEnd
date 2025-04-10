@@ -46,7 +46,7 @@ class CursoController {
     const { title, instrument, level, duration, price, instructor, maxStudents } = req.body;
 
     try {
-      const cursoAtualizada = await cursoModel.update(
+      const cursoAtualizado = await cursoModel.update(
         Number(id),
         title,
         instrument,
@@ -57,11 +57,11 @@ class CursoController {
         maxStudents
       );
 
-      if (!cursoAtualizada) {
+      if (!cursoAtualizado) {
         return res.status(404).json({ erro: "Curso não encontrada!" });
       }
 
-      res.json(cursoAtualizada);
+      res.json(cursoAtualizado);
     } catch (error) {
       console.error(error);
       res.status(500).json({ erro: "Erro ao atualizar curso!" });
