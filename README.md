@@ -190,7 +190,7 @@ npx prisma migrate dev
 4. Inicie o servidor:
 
 ```bash
-npm start
+npm run dev
 ```
 
 ---
