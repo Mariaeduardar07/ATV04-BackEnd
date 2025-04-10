@@ -11,6 +11,23 @@ class CursoController {
     }
   };
 
+
+  getById = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+      const curso = await cursoModel.getById(parseInt(id));
+
+      if (!curso) {
+        return res.status(404).json({ erro: "Curso não encontrada" });
+      }
+      res.json(curso);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ erro: "Erro ao buscar curso" });
+    }
+  };
+
   create = async (req, res) => {
     const { title, instrument, level, duration, price, instructor, maxStudents } = req.body;
     // const descricao = req.body.descricao;
