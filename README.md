@@ -1,18 +1,23 @@
-# Aula: Configuração de Projeto Backend com Prisma
+# Projeto Backend com Prisma - Gerenciamento de Cursos
 
-## Cabeçalho de Aula
+## Descrição do Projeto
 
-**Habilidades Trabalhadas:**
+Este projeto é uma API RESTful desenvolvida em Node.js para o gerenciamento de cursos. Utiliza o Prisma ORM para integração com o banco de dados SQLite, permitindo operações como criação, leitura, atualização e exclusão de cursos.
 
-- Desenvolvimento de APIs RESTful com Node.js
-- Integração de ORM (Prisma) com projetos backend
-- Modelagem de dados e persistência
-- Tratamento de erros em aplicações assíncronas
-- Refatoração de código para padrões modernos
+## Habilidades Trabalhadas
 
-## Introdução
+- Desenvolvimento de APIs RESTful com Node.js.
+- Integração de ORM (Prisma) com projetos backend.
+- Modelagem de dados e persistência.
+- Tratamento de erros em aplicações assíncronas.
+- Refatoração de código para padrões modernos.
 
-Nesta aula, vamos transformar um projeto backend que utiliza armazenamento em memória para um que utiliza banco de dados persistente através do Prisma ORM. Esta refatoração é um passo importante para criar aplicações escaláveis e robustas.
+## Tecnologias Utilizadas
+
+- **Node.js**
+- **Express.js**
+- **Prisma ORM**
+- **SQLite**
 
 ## Passo a Passo da Configuração
 
@@ -51,25 +56,6 @@ datasource db {
 
 model Task {
   id        Int     @id @default(autoincrement())# Projeto Backend com Prisma - Gerenciamento de Cursos
-
-## Descrição do Projeto
-
-Este projeto é uma API RESTful desenvolvida em Node.js para o gerenciamento de cursos. Utiliza o Prisma ORM para integração com o banco de dados SQLite, permitindo operações como criação, leitura, atualização e exclusão de cursos.
-
-## Habilidades Trabalhadas
-
-- Desenvolvimento de APIs RESTful com Node.js.
-- Integração de ORM (Prisma) com projetos backend.
-- Modelagem de dados e persistência.
-- Tratamento de erros em aplicações assíncronas.
-- Refatoração de código para padrões modernos.
-
-## Tecnologias Utilizadas
-
-- **Node.js**
-- **Express.js**
-- **Prisma ORM**
-- **SQLite**
 
  ---
 
