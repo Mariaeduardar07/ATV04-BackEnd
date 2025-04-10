@@ -32,9 +32,6 @@ class CursoController {
       if (!instructor) {
         return res.status(400).json({ erro: "Instrutor é obrigatório" });
       }
-      if (!maxStudents) {
-        return res.status(400).json({ erro: "O máximo de alunos é obrigatório" });
-      }
 
       const novoCurso = await cursoModel.create(title, instrument, level, duration, price, instructor, maxStudents);
       res.status(201).json(novoCurso);
