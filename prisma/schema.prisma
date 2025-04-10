@@ -21,7 +21,7 @@ model Cursos {
   duration Int
   price   Decimal
   instructor String
-  maxStudants Int
+  maxStudents Int
 
 
   createdAt DateTime @default(now())

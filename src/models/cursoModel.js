@@ -2,24 +2,35 @@ import prisma from "../../prisma/client.js";
 
 class CursoModel {
   getAll = async () => {
-    return await prisma.task.findMany();
+    return await prisma.cursos.findMany();
   };
 
-  create = async (descricao) => {
-    return await prisma.task.create({
+  create = async (title, instrument, level, duration, price, instructor, maxStudents) => {
+    return await prisma.cursos.create({
       data: {
-        descricao,
+        title,
+        instrument,
+        level,
+        duration,
+        price,
+        instructor,
+        maxStudents,
       },
     });
   };
 
-  update = async (id, concluida, descricao) => {
+  update = async (id, title, instrument, level, duration, price, instructor, maxStudents) => {
     try {
-      const curso = await prisma.task.update({
+      const curso = await prisma.cursos.update({
         where: { id },
         data: {
-          concluida: concluida !== undefined ? concluida : true,
-          descricao,
+          title,
+          instrument,
+          level,
+          duration,
+          price,
+          instructor,
+          maxStudents,
         },
       });
 
@@ -32,7 +43,7 @@ class CursoModel {
 
   delete = async (id) => {
     try {
-      const cursoDeletada = await prisma.task.delete({
+      const cursoDeletada = await prisma.cursos.delete({
         where: { id },
       });
 
