@@ -1,4 +1,4 @@
-# Projeto Backend com Prisma - Gerenciamento de Cursos
+# Projeto Backend com Prisma - Sistema de Gerenciamento de Cursos Musicais
 
 ## Descrição do Projeto
 
