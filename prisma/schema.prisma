@@ -13,12 +13,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Task {
+model Cursos {
   id        Int     @id @default(autoincrement())
-  descricao String
-  concluida Boolean @default(false)
+  title String
+  instrument String
+  level     String
+  duration Int
+  price   Decimal
+  instructor String
+  maxStudants Int
 
-  criadaEm DateTime @default(now())
 
-  @@map("tasks")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("Cursos")
 }
